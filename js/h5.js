@@ -41,9 +41,9 @@ $(document).ready(function(){
             }
         }
     });
-    // showPage1();
+    showPage1();
     // $.fn.fullpage.moveTo(5);
-    showPage6();
+    // showPage9();
 
     
 
@@ -161,5 +161,5 @@ var showPage8=function(){
     },4000)
 }
 var showPage9=function(){
-    
+    $('.page9 .title').css('animation','zdZoom2 1s')
 }
