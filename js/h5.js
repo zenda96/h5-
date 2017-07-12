@@ -43,7 +43,7 @@ $(document).ready(function(){
     });
     // showPage1();
     // $.fn.fullpage.moveTo(5);
-    showPage4();
+    showPage6();
 
     
 
@@ -125,7 +125,23 @@ var showPage5=function(){
     
 }
 var showPage6=function(){
-    
+    $('.page6 .title').css('animation','zdZoom2 1s')
+    var t1 = setTimeout(function(){
+        $('.page6 .imgLeftIn.mid').animate({
+            left:0
+        },timeplace6)
+    },1000)
+    var timeplace6=function(){
+        $('.page6 .imgLeftIn').animate({
+            left:0
+        },1000)
+        $('.page6 .imgRightIn').animate({
+            right:0
+        },1000)
+    }
+    var t2 = setTimeout(function(){
+        $('.arrow').css('display','block');
+    },2000)
 }
 var showPage7=function(){
     
