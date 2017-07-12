@@ -1,45 +1,93 @@
 $(document).ready(function(){
-    $('#fullpage').fullpage({})
+    $('#fullpage').fullpage({
+        autoScrolling:true,
+        // onLeave:function(index, nextIndex, direction){
+        //     switch(nextIndex){
+        //         case 2:{
+        //             showPage2();
+        //         }
+        //         break;
+        //         case 3:{
+        //             showPage3();
+        //         }
+        //         break;
+        //         case 4:{
+        //             showPage4();
+        //         }
+        //         break;
+        //         case 5:{
+        //             showPage5();
+        //         }
+        //         break;
+        //         case 6:{
+        //             showPage6();
+        //         }
+        //         break;
+        //         case 7:{
+        //             showPage7();
+        //         }
+        //         break;
+        //         case 8:{
+        //             showPage8();
+        //         }
+        //         break;
+        //         case 9:{
+        //             showPage9();
+        //         }
+        //         break;
+        //     }
+        // }
+    });
+    showPage5();
+    // $.fn.fullpage.moveTo(8);
 
-    // $('.liner2').addClass('slideOutRight')
-    // setTimeout(function(){
-    //     $('.liner2').addClass('slideInLeft')
-    // },1)
+    
 
-    $('.liner2').animate({
+});
+var showPage1=function(){
+    $('.page1 .liner2').animate({
         left:'100%',
     },1000,'linear',showPage1Title);
-    
-    // $('.liner2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     // $('.liner2').show();
-    //     // $('.liner2').addClass('slideInLeft');
-        
-        
-    // });
-
-    // $('.title-bot').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.infotext').show();
-    //     $('.infotext').addClass('fadeInUp');
-    //     $('.infotext').show();
-    // })
-});
+}
 var showPage1Title = function(){
-        // $('.title-mid').show();
-        // $('.title-mid').addClass('zoomIn');
-        // $('.title-top').show();
-        // $('.title-top').addClass('flipInX');
-        
-        $('.title-bot').animate({
+        $('.page1 .title-bot').animate({
             height:'6%'
         },1000);
-        // $('.title-mid img').animate({
-        //     height:'100%'
-        // },1000);
-        $('.title-top').animate({
+        $('.page1 .title-top').animate({
             height:'4%'
         },1000);
-        $('.liner1').animate({
-            
+        $('.page1 .liner1').animate({
             top:'50%'
-        },1000,'swing')
+        },1000,'swing');        
+        $('.page1 .intro').animate({
+            top:'65%'
+        },1000,'swing',function(){
+            $('.arrow').show();
+        });
     }
+var showPage2=function(){
+    
+}
+var showPage3=function(){
+    
+}
+var showPage4=function(){
+    
+}
+var showPage5=function(){
+    
+}
+var showPage6=function(){
+    
+}
+var showPage7=function(){
+    
+}
+var showPage8=function(){
+    setTimeout(function(){
+        $('.arrow').css('display','block');
+    },2000)
+}
+var showPage9=function(){
+    
+}

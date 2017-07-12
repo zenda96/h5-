@@ -1,50 +1,67 @@
-.page1{
-    background: url('../images/bg1.png') 0 0 no-repeat;
-    background-size:cover;
-
-}
 .container{
     position:relative;
     height: 100%;
 }
-
+/*page1*/
+.page1{
+    background: url('../images/p1/bg1.png') 0 0 no-repeat;
+    background-size:cover;
+}
 .page1 .liner{
-    background: url('../images/liner-1.png') 0 0 no-repeat;
+    background: url('../images/p1/liner-1.png') 0 0 no-repeat;
     background-size:cover;
     position:absolute;
-    /*top:calc(90px + 35%);*/
     top:80%;
     left:0;
     height:15%;
     width:100%;
 }
 .page1 .liner1{
-    background: url('../images/liner-1.png') 0 0 no-repeat;
+    background: url('../images/p1/liner-1.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page1 .liner2{
     background: #0a173a;
-    /*display: none;*/
 }
 .page1 .intro{
     position:absolute;
-    bottom:10px;
+    top:100%;
     left:0;
     height:auto;
     width:100%;
-}
-.page1 .intro .infotext{
     text-align: center;
-    color: #fff;
-    font-family: "微软雅黑";
-    font-size:12px;
+}
+.page1 .intro img{
+    display: block;
+    margin:0 auto;
+}
+.page1 .intro .int{
+    height: 40%;
+    width:6%;
+}
+.page1 .intro .tp{
+    height: 45%;
+    width: 50%;
+    padding: 20px;
+}
+.footer{
+    position: absolute;
+    bottom: 5%;
+    left:0;
+    margin-top: 10px;
+    width:100%;
+    text-align: center;
+}
+.arrow{
+    height: 5%;
+    width: 10%;
     display: none;
+    margin: 0 auto;
 }
 .page1 .title-top{
-    background:url('../images/subintro-1.png') 50% 50% no-repeat;
+    background:url('../images/p1/subintro-1.png') 50% 50% no-repeat;
     background-size:contain;
     height:0;
-    /*display: none;*/
 }
 .page1 .text{
     position:absolute;
@@ -55,12 +72,9 @@
     margin-bottom:10px;
 }
 .page1 .title-mid{
-    /*background: url('../images/title-1.png') 50% 50% no-repeat;
-    background-size:contain;*/
     height:70%;
     margin:15px 0;
     text-align: center;
-    /*display: none;*/
 }
 .page1 .title-mid img{
     height: 100%;
@@ -83,7 +97,138 @@
     }
 }
 .page1 .title-bot{
-    background: url('../images/subtitle-1.png') 50% 50% no-repeat;
+    background: url('../images/p1/subtitle-1.png') 50% 50% no-repeat;
     background-size:contain;
     height:0;
 }
+.arrow{
+    animation:nextPage 2s infinite;
+}
+@keyframes nextPage{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes nextPage{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*page5*/
+.page5{
+    background: url('../images/p8/bg-8.png') 0 0 no-repeat;
+    background-size:cover;
+}
+.page5 .title{
+    background: url('../images/p5/title.png') center left no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 15%;
+    top:13%;
+    left: 0;
+    position: absolute;    
+}
+.page5 .text{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 15%;
+  text-align: center;  
+}
+.page5 .textTop img,
+.page5 .textMid img,
+.page5 .textBot img,
+.page5 .textEnd img{
+    height: 23%;
+    margin-top: 3%;
+}
+.page5 .textTop img{
+    width: 70%;
+    animation: p5TextTop 1s;
+}
+.page5 .textMid img{
+    width: 85%;
+    animation: p5TextTop 2s;
+}
+.page5 .textBot img{
+    width: 80%;
+    animation: p5TextTop 3s;
+}
+.page5 .textEnd img{
+    width: 80%;
+    animation: p5TextTop 3s;
+}
+@keyframes p5TextTop{
+    from{
+        opacity: 0;
+        transform: scale(0.6)
+    }
+    to{
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+/*page8*/
+.page8{
+    background: url('../images/p8/bg-8.png') 0 0 no-repeat;
+    background-size:cover;
+}
+.page8 .title{
+    background: url('../images/p8/title.png') center center no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 15%;
+    top:13%;
+    left: 0;
+    position: absolute;    
+}
+.page8 .text{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 15%;
+  text-align: center;  
+}
+.page8 .textTop img,
+.page8 .textMid img,
+.page8 .textBot img{
+    height: 30%;
+    margin-top: 3%;
+}
+.page8 .textTop img{
+    width: 70%;
+    animation: p8TextTop 1s;
+}
+.page8 .textMid img{
+    width: 85%;
+    animation: p8TextTop 2s;
+}
+.page8 .textBot img{
+    width: 80%;
+    animation: p8TextTop 3s;
+}
+@keyframes p8TextTop{
+    from{
+        opacity: 0;
+        transform: scale(0.6)
+    }
+    to{
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+
