@@ -78,7 +78,7 @@
 }
 .page1 .title-mid img{
     height: 100%;
-    animation:title1 2s;
+    animation:title1 1s;
 }
 @keyframes title1{
     from{
@@ -102,7 +102,7 @@
     height:0;
 }
 .arrow{
-    animation:nextPage 2s infinite;
+    animation:nextPage 1s infinite;
 }
 @keyframes nextPage{
     from{
@@ -124,14 +124,76 @@
         opacity: 1;
     }
 }
-
+/*page2*/
+.page2{
+    background: url('../images/p2/bg-2.png') 0 0 no-repeat;
+    background-size:cover;
+}
+.page2 .title{
+    background: url('../images/p2/title.png') center right no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 15%;
+    top:13%;
+    left: 0;
+    position: absolute;    
+}
+.page2 .text{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 15%;  
+  display: none;
+}
+.page2 .textTop img,
+.page2 .textMid img,
+.page2 .textBot img{
+    height: 23%;
+    margin-top: 3%;
+    position: relative;
+}
+.page2 .textTop,
+.page2 .textBot{
+    text-align: left;
+    padding: 0 20px;
+}
+.page2 .textMid{
+    text-align: right;
+    padding: 0 20px;
+}
+.page2 .textTop img{
+    width: 60%;
+}
+.page2 .textMid img{
+    width: 60%;
+    
+}
+.page2 .textBot img{
+    width: 60%;
+    
+}
+/*page3*/
+.page3{
+    background: url('../images/p3/bg-3.png') 0 0 no-repeat;
+    background-size:cover;
+}
+.page3 .title{
+    background: url('../images/p3/title.png') center center no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 15%;
+    top:13%;
+    left: 0;
+    position: absolute;    
+}
 /*page5*/
 .page5{
-    background: url('../images/p8/bg-8.png') 0 0 no-repeat;
+    background: url('../images/p5/bg-5.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page5 .title{
-    background: url('../images/p5/title.png') center left no-repeat;
+    background: url('../images/p5/title.png') center center no-repeat;
     background-size:contain;
     width: 100%;
     height: 15%;
@@ -146,6 +208,7 @@
   left: 0;
   bottom: 15%;
   text-align: center;  
+  display: none;
 }
 .page5 .textTop img,
 .page5 .textMid img,
@@ -153,30 +216,27 @@
 .page5 .textEnd img{
     height: 23%;
     margin-top: 3%;
+    position: relative;
 }
 .page5 .textTop img{
-    width: 70%;
-    animation: p5TextTop 1s;
+    width: 80%;
 }
 .page5 .textMid img{
-    width: 85%;
-    animation: p5TextTop 2s;
+    width: 80%;
 }
 .page5 .textBot img{
     width: 80%;
-    animation: p5TextTop 3s;
 }
 .page5 .textEnd img{
-    width: 80%;
-    animation: p5TextTop 3s;
+    width: 47%;
 }
-@keyframes p5TextTop{
+@keyframes zdZoomIn{
     from{
-        opacity: 0;
+        /*opacity: 0;*/
         transform: scale(0.6)
     }
     to{
-        opacity: 1;
+        /*opacity: 1;*/
         transform: scale(1)
     }
 }
@@ -197,36 +257,56 @@
 .page8 .text{
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 45%;
   left: 0;
   bottom: 15%;
-  text-align: center;  
+  text-align: center; 
+  display: none; 
 }
 .page8 .textTop img,
 .page8 .textMid img,
 .page8 .textBot img{
     height: 30%;
     margin-top: 3%;
+    position: relative;
 }
 .page8 .textTop img{
-    width: 70%;
-    animation: p8TextTop 1s;
+    width: 85%;
+    /*animation: zdFadeIn 1s;*/
 }
 .page8 .textMid img{
     width: 85%;
-    animation: p8TextTop 2s;
+    /*animation: zdFadeIn 2s;*/
 }
 .page8 .textBot img{
-    width: 80%;
-    animation: p8TextTop 3s;
+    width: 57%;
+    /*animation: zdFadeIn 3s;*/
 }
-@keyframes p8TextTop{
-    from{
+@keyframes zdFadeUp{
+    0%{
         opacity: 0;
-        transform: scale(0.6)
+        top:30px;
     }
-    to{
+    20%{
+        opacity: 0;
+        top:8px;
+    }
+    100%{
         opacity: 1;
+        top:0px;
+    }
+}
+@keyframes zdZoom2{
+    0%{
+        transform: scale(0.8)
+    }
+    25%{
+        transform: scale(1.2)
+    }
+    50%{
+        transform: scale(0.9)
+    }
+    100%{
         transform: scale(1)
     }
 }
