@@ -41,9 +41,9 @@ $(document).ready(function(){
             }
         }
     });
-    showPage2();
+    // showPage1();
     // $.fn.fullpage.moveTo(5);
-    // showPage5();
+    showPage4();
 
     
 
@@ -82,10 +82,32 @@ var showPage2=function(){
     },5000)
 }
 var showPage3=function(){
-    
+    $('.page3 .title').css('animation','zdZoom2 1s')
+    var t1 = setTimeout(function(){
+        $('.page3 .imgLeftIn').animate({
+            left:0
+        },1000)
+        $('.page3 .imgRightIn').animate({
+            right:0
+        },1000)
+    },1000)
+    var t2 = setTimeout(function(){
+        $('.arrow').css('display','block');
+    },2000)
 }
 var showPage4=function(){
-    
+    $('.page4 .title').css('animation','zdZoom2 1s')
+    var t1 = setTimeout(function(){
+        $('.page4 .imgLeftIn').animate({
+            left:0
+        },1000)
+        $('.page4 .imgRightIn').animate({
+            right:0
+        },1000)
+    },1000)
+    var t2 = setTimeout(function(){
+        $('.arrow').css('display','block');
+    },2000)
 }
 var showPage5=function(){
     // console.log('5')
