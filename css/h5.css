@@ -2,6 +2,18 @@
     position:relative;
     height: 100%;
 }
+.loading{
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: #0a173a;
+}
 /*page1*/
 .page1{
     background: url('../images/p1/bg1.png') 0 0 no-repeat;
@@ -80,22 +92,7 @@
     height: 100%;
     animation:title1 1s;
 }
-@keyframes title1{
-    from{
-        transform: scale(0.1);opacity:0
-    }
-    to{
-        transform: scale(1);opacity:1
-    }
-}
-@-webkit-keyframes title1{
-    from{
-        transform: scale(0.1);opacity:0
-    }
-    to{
-        transform: scale(1);opacity:1
-    }
-}
+
 .page1 .title-bot{
     background: url('../images/p1/subtitle-1.png') 50% 50% no-repeat;
     background-size:contain;
@@ -104,26 +101,7 @@
 .arrow{
     animation:nextPage 1s infinite;
 }
-@keyframes nextPage{
-    from{
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    to{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-@-webkit-keyframes nextPage{
-    from{
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    to{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
+
 /*page2*/
 .page2{
     background: url('../images/p2/bg-2.png') 0 0 no-repeat;
@@ -291,16 +269,6 @@
 .page5 .textEnd img{
     width: 47%;
 }
-@keyframes zdZoomIn{
-    from{
-        /*opacity: 0;*/
-        transform: scale(0.6)
-    }
-    to{
-        /*opacity: 1;*/
-        transform: scale(1)
-    }
-}
 /*page6*/
 .page6{
     background: url('../images/p6/bg-6.png') 0 0 no-repeat;
@@ -308,9 +276,10 @@
 }
 .page6 .title{
     background: url('../images/p6/title.png') center center no-repeat;
+    background-size: 80%;
     width: 100%;
     height: 15%;
-    top:11%;
+    top:13%;
     left: 0;
     position: absolute;    
 }
@@ -368,7 +337,44 @@
     width: 57%;
     /*animation: zdFadeIn 3s;*/
 }
+
+/*page9*/
+.page9{
+    background: url('../images/p9/bg-9.png') 0 0 no-repeat;
+    background-size:cover;
+}
+.page9 .title{
+    background: url('../images/p9/title.png') center center no-repeat;
+    background-size:75%;
+    width: 100%;
+    height: 15%;
+    top:9%;
+    left: 0;
+    position: absolute;    
+}
+.page9 .img{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:23%;
+    text-align: center;
+}
+/*animation*/
 @keyframes zdFadeUp{
+    0%{
+        opacity: 0;
+        top:30px;
+    }
+    20%{
+        opacity: 0;
+        top:8px;
+    }
+    100%{
+        opacity: 1;
+        top:0px;
+    }
+}
+@-webkit-keyframes zdFadeUp{
     0%{
         opacity: 0;
         top:30px;
@@ -396,26 +402,75 @@
         transform: scale(1)
     }
 }
-/*page9*/
-.page9{
-    background: url('../images/p9/bg-9.png') 0 0 no-repeat;
-    background-size:cover;
+@-webkit-keyframes zdZoom2{
+    0%{
+        transform: scale(0.8)
+    }
+    25%{
+        transform: scale(1.2)
+    }
+    50%{
+        transform: scale(0.9)
+    }
+    100%{
+        transform: scale(1)
+    }
 }
-.page9 .title{
-    background: url('../images/p9/title.png') center center no-repeat;
-    background-size:75%;
-    width: 100%;
-    height: 15%;
-    top:8%;
-    left: 0;
-    position: absolute;    
+@keyframes title1{
+    from{
+        transform: scale(0.1);opacity:0
+    }
+    to{
+        transform: scale(1);opacity:1
+    }
 }
-.page9 .img{
-    position: absolute;
-    width: 100%;
-    left:0;
-    bottom:23%;
-    text-align: center;
+@-webkit-keyframes title1{
+    from{
+        transform: scale(0.1);opacity:0
+    }
+    to{
+        transform: scale(1);opacity:1
+    }
+}
+@keyframes nextPage{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes nextPage{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes zdZoomIn{
+    from{
+        /*opacity: 0;*/
+        transform: scale(0.6)
+    }
+    to{
+        /*opacity: 1;*/
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes zdZoomIn{
+    from{
+        /*opacity: 0;*/
+        transform: scale(0.6)
+    }
+    to{
+        /*opacity: 1;*/
+        transform: scale(1)
+    }
 }
 @keyframes zdShake{
     0%{
@@ -431,5 +486,18 @@
         transform: rotate(0deg);
     }
 }
-
+@-webkit-keyframes zdShake{
+    0%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 

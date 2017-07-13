@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $('loading').show();
+})
+
+window.onload=function(){
+    // console.log('111')
+    $('.loading').hide();
     $('#fullpage').fullpage({
         autoScrolling:true,
         onLeave:function(index, nextIndex, direction){
@@ -38,13 +44,13 @@ $(document).ready(function(){
             }
         }
     });
-    // showPage1();
+    showPage1();
     // $.fn.fullpage.moveTo(5);
-    showPage8();
+    // showPage9();
 
     
 
-});
+};
 var showPage1=function(){
     $('.page1 .liner2').animate({
         left:'100%',
