@@ -16,10 +16,7 @@ $(document).ready(function(){
                 }
                 break;
                 case 5:{
-                    // if(index==4){
                         showPage5();
-                    // }
-                    
                 }
                 break;
                 case 6:{
@@ -27,23 +24,23 @@ $(document).ready(function(){
                 }
                 break;
                 case 7:{
-                    showPage7();
-                }
-                break;
-                case 8:{
                     showPage8();
                 }
                 break;
-                case 9:{
+                case 8:{
                     showPage9();
                 }
                 break;
+                // case 9:{
+                //     showPage9();
+                // }
+                // break;
             }
         }
     });
-    showPage1();
+    // showPage1();
     // $.fn.fullpage.moveTo(5);
-    // showPage9();
+    showPage8();
 
     
 
@@ -70,12 +67,12 @@ var showPage1Title = function(){
         });
     }
 var showPage2=function(){
-    $('.page2 .title').css('animation','zdZoom2 1s')
+    $('.page2 .title').css('animation','zdZoom2 1.5s')
     var t1 = setTimeout(function(){
         $('.page2 .text').css('display','block');
         $('.page2 .textTop img').css('animation','zdFadeUp 1s')
         $('.page2 .textMid img').css('animation','zdFadeUp 2s')
-        $('.page2 .textBot img').css('animation','zdFadeUp 3s')
+        $('.page2 .textBot img').css('animation','zdFadeUp 2.5s')
     },1000)
     var t2 = setTimeout(function(){
         $('.arrow').css('display','block');
@@ -96,7 +93,7 @@ var showPage3=function(){
     },2000)
 }
 var showPage4=function(){
-    $('.page4 .title').css('animation','zdZoom2 1s')
+    $('.page4 .title').css('animation','zdZoom2 1.5s')
     var t1 = setTimeout(function(){
         $('.page4 .imgLeftIn').animate({
             left:0
@@ -134,20 +131,17 @@ var showPage6=function(){
     var timeplace6=function(){
         $('.page6 .imgLeftIn').animate({
             left:0
-        },1000)
+        },2000)
         $('.page6 .imgRightIn').animate({
             right:0
-        },1000)
+        },2000)
     }
     var t2 = setTimeout(function(){
         $('.arrow').css('display','block');
     },2000)
 }
-var showPage7=function(){
-    
-}
+var showPage7=function(){}
 var showPage8=function(){
-    // console.log('8')
      $('.page8 .title').css('animation','zdZoom2 1s')
     setTimeout(function(){
         $('.page8 .text').css('display','block');
@@ -162,4 +156,6 @@ var showPage8=function(){
 }
 var showPage9=function(){
     $('.page9 .title').css('animation','zdZoom2 1s')
+    $('.page9 .qrcode').css('animation','zdShake 1s')
+    $('.page9 .qrcode').css('animation-delay','2s')
 }
