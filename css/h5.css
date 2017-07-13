@@ -16,7 +16,7 @@
 }
 /*page1*/
 .page1{
-    background: url('../images/p1/bg1.png') 0 0 no-repeat;
+    background: #0a173a url('../images/p1/bg1.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page1 .liner{
@@ -104,7 +104,7 @@
 
 /*page2*/
 .page2{
-    background: url('../images/p2/bg-2.png') 0 0 no-repeat;
+    background: #0a173a url('../images/p2/bg-2.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page2 .title{
@@ -128,14 +128,12 @@
 .page2 .textMid img,
 .page2 .textBot img{
     height: 23%;
-    margin-top: 3%;
     position: relative;
 }
 .page2 .textTop,
 .page2 .textBot{
     text-align: left;
     padding-left:10%;
-    padding-bottom: 2%;
 }
 .page2 .textMid{
     text-align: right;
@@ -146,15 +144,15 @@
 }
 .page2 .textMid img{
     width: 60%;
-    
+    margin-top: 4%;    
 }
 .page2 .textBot img{
-    width: 60%;
+    width: 59%;
     
 }
 /*page3*/
 .page3{
-    background: url('../images/p3/bg-3.png') 0 0 no-repeat;
+    background: #0a173a url('../images/p3/bg-3.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page3 .title{
@@ -198,7 +196,7 @@
 }
 /*page4*/
 .page4{
-    background: url('../images/p4/bg-4.png') 0 0 no-repeat;
+    background:#0a173a  url('../images/p4/bg-4.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page4 .title{
@@ -228,7 +226,7 @@
 }
 /*page5*/
 .page5{
-    background: url('../images/p5/bg-5.png') 0 0 no-repeat;
+    background: #0a173a url('../images/p5/bg-5.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page5 .title{
@@ -271,7 +269,7 @@
 }
 /*page6*/
 .page6{
-    background: url('../images/p6/bg-6.png') 0 0 no-repeat;
+    background: #0a173a url('../images/p6/bg-6.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page6 .title{
@@ -297,7 +295,7 @@
 }
 /*page8*/
 .page8{
-    background: url('../images/p8/bg-8.png') 0 0 no-repeat;
+    background:#0a173a  url('../images/p8/bg-8.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page8 .title{
@@ -331,16 +329,14 @@
 }
 .page8 .textMid img{
     width: 85%;
-    /*animation: zdFadeIn 2s;*/
 }
 .page8 .textBot img{
     width: 57%;
-    /*animation: zdFadeIn 3s;*/
 }
 
 /*page9*/
 .page9{
-    background: url('../images/p9/bg-9.png') 0 0 no-repeat;
+    background: #0a173a url('../images/p9/bg-9.png') 0 0 no-repeat;
     background-size:cover;
 }
 .page9 .title{

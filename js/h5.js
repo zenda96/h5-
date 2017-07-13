@@ -3,10 +3,11 @@ $(document).ready(function(){
 })
 
 window.onload=function(){
-    // console.log('111')
     $('.loading').hide();
     $('#fullpage').fullpage({
         autoScrolling:true,
+        recordHistory: true,
+        sectionsColor :'#0a173a',
         onLeave:function(index, nextIndex, direction){
             switch(nextIndex){
                 case 2:{
@@ -47,9 +48,6 @@ window.onload=function(){
     showPage1();
     // $.fn.fullpage.moveTo(5);
     // showPage9();
-
-    
-
 };
 var showPage1=function(){
     $('.page1 .liner2').animate({
