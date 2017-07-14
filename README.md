@@ -4,3 +4,5 @@ using css3&jquery&fullpage
 http://go.wisedu.com/hundunH5/
 
 为保证浏览效果，电脑浏览器端请F12调成手机模式
+
+finished
