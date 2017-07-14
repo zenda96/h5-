@@ -3,6 +3,15 @@ $(document).ready(function(){
 })
 
 window.onload=function(){
+     wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+    });
     var playflag = 1;
     var audio = document.getElementById('audio');
     audio.play();
@@ -26,6 +35,7 @@ window.onload=function(){
         onLeave:function(index, nextIndex, direction){
             switch(nextIndex){
                 case 1:{
+                    hidePage1();
                     showPage1();
                     if(index==2){
                         hidePage2();
@@ -33,6 +43,7 @@ window.onload=function(){
                 }
                 break;
                 case 2:{
+                    hidePage2();
                     showPage2();
                     if(index==1){
                         hidePage1();
@@ -43,6 +54,7 @@ window.onload=function(){
                 }
                 break;
                 case 3:{
+                    hidePage3();
                     showPage3();
                     if(index==2){
                         hidePage2();
@@ -53,6 +65,7 @@ window.onload=function(){
                 }
                 break;
                 case 4:{
+                    hidePage4();
                     showPage4();
                     if(index==3){
                         hidePage3();
@@ -63,6 +76,7 @@ window.onload=function(){
                 }
                 break;
                 case 5:{
+                        hidePage5();
                         showPage5();
                         if(index==4){
                         hidePage4();
@@ -73,6 +87,7 @@ window.onload=function(){
                 }
                 break;
                 case 6:{
+                    hidePage6();
                     showPage6();
                     if(index==5){
                         hidePage5();
@@ -83,6 +98,7 @@ window.onload=function(){
                 }
                 break;
                 case 7:{
+                    hidePage7();
                     showPage7();
                     if(index==6){
                         hidePage6();
@@ -93,6 +109,7 @@ window.onload=function(){
                 }
                 break;
                 case 8:{
+                    hidePage8();
                     showPage8();
                     if(index==7){
                         hidePage7();
@@ -103,6 +120,7 @@ window.onload=function(){
                 }
                 break;
                 case 9:{
+                    hidePage9();
                     showPage9();
                     if(index==8){
                         hidePage8();
@@ -175,7 +193,9 @@ var showPage2=function(){
 }
 var hidePage2=function(){
     $('.page2 .title').css('animation','none');
-    clearTimeout(p2t1);
+    if(typeof(p2t1)=='number'){
+        clearTimeout(p2t1);
+    }
     $('.page2 .text').css('display','none');
     $('.page2 .textTop img').css('animation','none')
     $('.page2 .textMid img').css('animation','none')
@@ -199,7 +219,9 @@ var showPage3=function(){
     // },2000)
 }
 var hidePage3=function(){
-    clearTimeout(p3t1);
+    if(typeof(p3t1)=='number'){
+        clearTimeout(p3t1);
+    }
     $('.page3 .title').css('animation','none');
     $('.page3 .imgLeftIn').css({
         left:'-350px'
@@ -224,7 +246,9 @@ var showPage4=function(){
     // },2000)
 }
 var hidePage4=function(){
-    clearTimeout(p4t1);
+    if(typeof(p4t1)=='number'){
+        clearTimeout(p4t1);
+    }
     $('.page4 .title').css('animation','none');
     $('.page4 .imgLeftIn').css({
         left:'-450px'
@@ -249,7 +273,9 @@ var showPage5=function(){
     
 }
 var hidePage5=function(){
-    clearTimeout(p5t1);
+    if(typeof(p5t1)=='number'){
+        clearTimeout(p5t1);
+    }
     $('.page5 .title').css('animation','none')
     $('.page5 .text').css('display','none');
     $('.page5 .textTop img').css('animation','none')
@@ -278,7 +304,9 @@ var showPage6=function(){
     // },2000)
 }
 var hidePage6=function(){
-    clearTimeout(p6t1);
+    if(typeof(p6t1)=='number'){
+        clearTimeout(p6t1);
+    }
     $('.page6 .title').css('animation','none');
     $('.page6 .imgLeftIn.mid').css({
         left:'-350px'
@@ -317,7 +345,9 @@ var showPage8=function(){
     // },4000)
 }
 var hidePage8=function(){
-     clearTimeout(p8t1);
+     if(typeof(p8t1)=='number'){
+        clearTimeout(p8t1);
+    }
      $('.page8 .title').css('animation','none');
      $('.page8 .text').css('display','none');
      $('.page8 .title').css('animation','none')
