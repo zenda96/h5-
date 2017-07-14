@@ -1,21 +1,23 @@
+// 加载时候展示loading动图
 $(document).ready(function(){
     $('loading').show();
 })
 
+// 图片文件全部加载完毕后执行
 window.onload=function(){
-     wx.config({
-            // 配置信息, 即使不正确也能使用 wx.ready
-            debug: false,
-            appId: '',
-            timestamp: 1,
-            nonceStr: '',
-            signature: '',
-            jsApiList: []
-    });
     var playflag = 1;
     var audio = document.getElementById('audio');
     audio.play();
+    // 兼容ios微信webview无法自动播放音频的问题
+    document.addEventListener("WeixinJSBridgeReady", function () {  
+            audio.play();  
+    }, false);  
+    document.addEventListener('YixinJSBridgeReady', function() {  
+        audio.play();  
+    }, false);  
+
     $('.loading').hide();
+    // 控制音乐播放
     $('#controller').click(function(){
        if(playflag==1){
             audio.pause();
@@ -27,6 +29,7 @@ window.onload=function(){
             $('#controller').css('animation','zdLoop 5s linear infinite');
        }
     });
+    // fullpage插件控制滑屏
     $('#fullpage').fullpage({
         fixedElements:"#controller",
         autoScrolling:true,
@@ -131,8 +134,7 @@ window.onload=function(){
         }
     });
     showPage1();
-    // $.fn.fullpage.moveTo(7);
-    // showPage9();
+
 };
 var showPage1=function(){
     $('.page1 .title-mid img').css('animation','title1 1s')
@@ -214,9 +216,7 @@ var showPage3=function(){
             right:0
         },1000)
     },1000)
-    // var t2 = setTimeout(function(){
         $('.page3 .arrow').css('display','block');
-    // },2000)
 }
 var hidePage3=function(){
     if(typeof(p3t1)=='number'){
@@ -241,9 +241,7 @@ var showPage4=function(){
             right:0
         },1000)
     },1000)
-    // var t2 = setTimeout(function(){
         $('.page4 .arrow').css('display','block');
-    // },2000)
 }
 var hidePage4=function(){
     if(typeof(p4t1)=='number'){
@@ -267,9 +265,7 @@ var showPage5=function(){
         $('.page5 .textBot img').css('animation','zdFadeUp 3s')
         $('.page5 .textEnd img').css('animation','zdFadeUp 3.5s')
     },1000)
-    // var t2 = setTimeout(function(){
         $('.page5 .arrow').css('display','block');
-    // },10000)
     
 }
 var hidePage5=function(){
@@ -299,9 +295,7 @@ var showPage6=function(){
             right:0
         },1000)
     }
-    // var t2 = setTimeout(function(){
         $('.page6 .arrow').css('display','block');
-    // },2000)
 }
 var hidePage6=function(){
     if(typeof(p6t1)=='number'){
@@ -340,9 +334,7 @@ var showPage8=function(){
         $('.page8 .textMid img').css('animation','zdFadeUp 2s')
         $('.page8 .textBot img').css('animation','zdFadeUp 2.5s')
     },1000)
-    // setTimeout(function(){
         $('.page8 .arrow').css('display','block');
-    // },4000)
 }
 var hidePage8=function(){
      if(typeof(p8t1)=='number'){
